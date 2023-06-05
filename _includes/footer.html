@@ -1,6 +1,9 @@
-<footer class="footer">
-  <span>Updated:&nbsp;</span>
-  <span>{{ site.time | date: site.date_format | default: "%Y-%m-%d" }}</span>
-  <i class="fa-solid fa-heart fa-beat-fade"></i>
-  <a href="https://allenhsu6.github.io/" target="_blank">from allenhsu</a>
-</footer>
+<div class="container footer-container">
+  <p>
+    {{ site.name | escape }} -
+    <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
+    {%- if site.footer_show_references -%}
+      &nbsp;- {{ site.references_title | default: "References on request" }}
+    {%- endif -%}
+  </p>
+</div>
