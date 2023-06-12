@@ -6,38 +6,38 @@ repository: Git repository where your resume will be hosted, only required if yo
 version: 2
 
 # Personal info
-name: Your Name
-title: Your job title
-email: Your email (optional)
+name: AllenHsu
+title: Autonomous Driving Algorithm Engineer
+email: sy1714201@buaa.edu.cn
 # email_title: Email (Email title override)
-phone: Your phone number (optional)
+phone: (+86)17610071006
 # phone_title: Phone (Phone title override)
-website: Your website (eg. https://google.com)(optional)
+# website: Your website (eg. https://google.com)(optional)
 # website_title: Web (Website title override)
 
 # Dark Mode (true/false/never)
 darkmode: false
 
 # Social links
-twitter_username: jekyllrb
-github_username:  jekyll
-stackoverflow_username: "00000001"
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-xing_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-orcid_username: 0000-0000-0000-0000
-googlescholar_username: D847cGsAAAAJ
+# twitter_username: jekyllrb
+github_username:  allenhsu6
+# stackoverflow_username: "00000001"
+# dribbble_username: jekyll
+# facebook_username: jekyll
+# flickr_username: jekyll
+# instagram_username: jekyll
+# linkedin_username: jekyll
+# xing_username: jekyll
+# pinterest_username: jekyll
+# youtube_username: jekyll
+# orcid_username: 0000-0000-0000-0000
+# googlescholar_username: D847cGsAAAAJ
 
 # Additional icon links
 additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
+- title: CSDN
+  icon: fab fa-wordpress
+  url: https://blog.csdn.net/allenhsu6
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
 #   url: Link url (eg. https://google.com)
@@ -50,70 +50,167 @@ additional_links:
 
 # About Section
 # about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
+about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+    - I am an Autonomous Driving Algorithm Engineer. I am passionate about developing cutting-edge algorithms that drive the future of transportation. With 5 years of experience in this field, I have been involved in various aspects of autonomous driving, including perception, decision-making, and control systems.
 
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+    - I have gained expertise in developing and optimizing algorithms for object detection, and classification using sensor data such as LiDAR and cameras. I have also worked on developing advanced deep learning models and reinforcement learning algorithms for prediction and decision-making modules.
+
+    - One of my key strengths is my ability to bridge the gap between research and practical implementation. I enjoy translating state-of-the-art algorithms into robust and efficient solutions that can be deployed in real-world autonomous vehicles. I am skilled in programming languages such as Python, C++, and have experience with popular deep learning frameworks like PyTorch.
+
+    - Collaboration and continuous learning are important aspects of my work. I thrive in dynamic and multidisciplinary teams, where I can contribute my technical expertise and learn from others. I am always eager to explore new technologies and stay updated with the latest advancements in the field of autonomous driving.
+
+    - I am excited about the opportunity to contribute my skills and knowledge to this world. I believe that my strong background in autonomous driving algorithms, combined with my passion for innovation, make me a valuable asset to any team working in this exciting field.
 
 content:
+
+  - title: Education
+    layout: list
+    content:
+      - layout: top
+        title: Zhongshan University
+        sub_title: Ph.D. in Computer Science and Technology
+        caption: 2020.08-2020.12
+
+      - layout: top
+        title: Beihang University
+        sub_title: M.Sc. in Control Science and Engineering
+        caption: 2017.09-2020.01
+
+      - layout: top
+        title: Northeast University (985,211)
+        sub_title: B.Sc. in Automation
+        caption: 2011.09-2015.07
+
+  - title: Experience
+    layout: list
+    content:
+      - layout: right
+        title: ECARX Technology
+        caption: March 2022 - Present
+        sub_title: Senior Algorithm Engineer
+        quote: > 
+          Developed advanced algorithms for autonomous driving decision-making, perception, and data processing.
+        description: |
+          - Vehicle Prediction Algorithm Module (March 2022 - October 2022)
+            - Contributed as a core member in the development of the vehicle prediction module.
+            - Developed the vehicle prediction module which takes inputs from obstacle fusion, lane fusion, ego vehicle localization, static object perception (high-definition maps), and previous planned trajectory.
+            - Implemented obstacle prioritization, intent prediction, and trajectory prediction in the module.
+            - Responsible for the development of the vehicle-side code, including pre- and post-processing of the models.
+            - Handled data parsing, filtering, packaging, result validation, sorting, and deletion.
+            - Implemented the integration of different model results based on different scenarios.
+            
+          - Parking Obstacle Perception Algorithm Module (Mass Production Project) (October 2022 - Present)
+            - Core development member responsible for the 2D and 3D object detection model finetuning.
+            - Adapted the related models for on-vehicle inference and aligned the inference accuracy with the PC-side.
+            - Implemented post-processing for the 3D model.
+            - Supported the visualization with DHU module for the central control screen and obstacle avoidance with the regulation control module.
+            
+          - Data Closed-Loop Module (October 2022 - Present)
+            - Module primarily serving the parking perception mass production project.
+            - Led the module as the main responsible person.
+            - Defined data acquisition requirements and tracked the establishment of the data acquisition platform and ground truth system.
+            - Implemented the end-to-end automation of the data logging, filtering, automatic annotation, labeling, acceptance, and storage processes.
+            - Leveraged the Speedup ground truth system to generate 3D object detection bounding boxes with centimeter-level accuracy.
+            - Utilized GroundingDINO and SAM for text-to-2D box and segmentation outputs for large-scale and fast annotation data generation.
+      
+      - layout: left
+        title: National Key Laboratory, Institute of Software, Chinese Academy of Sciences
+        caption: March 2021 - February 2022
+        sub_title: Algorithm Engineer
+        quote: >
+          Worked on projects in the field of autonomous driving decision-making, focusing on deep reinforcement learning methods for training vehicles to make correct decisions on highways
+        description: |
+          - Worked in the field of autonomous driving decision-making.
+          - Conducted research on training vehicles to drive on highways and make correct decisions using deep reinforcement learning methods.
+          - Traditional decision-making algorithms are typically based on rules and manual feature design, which often exhibit a conservative behavior to ensure safety.
+          - Utilized DQN (Deep Q-Network), one of the classic deep reinforcement learning algorithms, to make decisions based on the surrounding environment and ego vehicle information, aiming to maximize the expected reward.
+          - Data engineering was primarily performed using open-source datasets and simulation environments.
+          - Achieved an accuracy rate of over 91% in simulated testing, demonstrating the model's ability to make safe and reasonable decisions in high-speed scenarios.
+          - Served as a teaching assistant for the "Reinforcement Learning" course at the University of Chinese Academy of Sciences and Hangzhou Graduate Institute.
+          - Assisted in the development of course materials and experiments.
+          - Covered topics such as Markov decision processes, Monte Carlo methods, temporal difference learning, eligibility traces, etc.
+          - Designed unmanned vehicle simulation scenarios using the gym framework for implementing reinforcement learning methods like SARSA, Q-Learning, etc.
+
+      - layout: right
+        title: waytous Intelligent Co., Ltd.
+        caption: January 2020 - August 2020
+        sub_title: Algorithm Engineer
+        quote: > 
+          Played a key role in the development and optimization of algorithms for path planning and control in autonomous systems.
+        description: |
+          - Worked on tasks related to the planning module.
+          - Added the Jump Point Search algorithm to the algorithm library for global path planning in a freespace scenario in a certain mining area.
+          - In scenes with a high number of surrounding obstacles, this algorithm significantly improved search speed while still outputting the optimal path, compared to traditional A* algorithm.
+          - Adapted the commonly used TEB (Timed Elastic Band) algorithm from ROS (Robot Operating System) to the trajectory optimization library for local trajectory planning.
+          - TEB is a local trajectory planner that considers constraints such as obstacles, velocity, acceleration, and time in multi-objective optimization. It efficiently and stably computes executable and smooth trajectories with suitable parameters.
+          - Worked on data processing tasks, including constructing trajectory datasets for trajectory clustering, prediction, and other analysis tasks.
+          - Utilized ETL (Extract, Transform, Load) techniques to process environment perception results from cameras and LiDAR (Light Detection and Ranging), as well as the positioning information from integrated inertial navigation systems.
+          - Used the zarr library, which supports multiple data formats, to unify the data format and achieve fast data loading.
+          - Uploaded the dataset to S3 for easy access and future algorithm iteration.
+
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
-        additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+      - title: Open Source Project
+        caption: December 2020 - February 2021
         quote: >
-          Short overview of the project (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
-  - title: Experience
-    layout: list
-    content:
-      - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
+          Development of open-source tutorials related to ROS (Robot Operating System)
+        description: |
+          - Developed tutorials covering various aspects of ROS, including communication mechanisms such as topics and services.
+          - Explored core functionality packages, such as the parameter server and TF (Transform) coordinate transformation.
+          - Analyzed the hardware and software components of robot platforms, including modeling language URDF (Unified Robot Description Format), controllers, and the Gazebo simulator.
+          - Provided detailed explanations of the ROS Navigation Stack, including nav_core, global_planner, local_planner, move_base, cost_map, AMCL (Adaptive Monte Carlo Localization), and more.
+          - Published tutorials and corresponding code on platforms like CSDN and GitHub.
+
+      - title: Visual Odometry
+        caption: May 2019 - August 2019
         quote: >
-          Short description of the company (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of role
-  - title: Education
-    layout: list
-    content:
-      - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
+          Work related to unmanned aerial vehicle (UAV) visual odometry
+        description: |
+          - Developed a visual odometry system for UAV localization.
+          - Constructed local feature maps using keyframes and matched ORB feature points between each frame and the local map.
+          - Used the PnP (Perspective-n-Point) algorithm to estimate the global pose.
+          - Designed specifically for scenarios where only short-term motion needs to be considered, such as UAV control, with lower computational requirements compared to full-scale VSLAM systems while meeting the accuracy requirements of the application.
+
+      - title: Formula Student Driverless Competition
+        caption: August 2018 - December 2018
         quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
+          Responsible for the planning and control of the Beijing University of Aeronautics and Astronautics (BUAA) AERO autonomous race car
+        description: |
+          - Led the planning and control division for the BUAA AERO autonomous race car in the China Formula Student Driverless Competition.
+          - Managed tasks such as straight-line acceleration, figure-eight maneuvering, and high-speed trajectory following, with high requirements for speed and steering control.
+          - Utilized PID control algorithms that have been widely validated in engineering applications due to their practicality.
+          - Given the competition's focus on high dynamic response, the control module primarily used proportional and differential terms for accurate trajectory tracking, with less emphasis on steady-state error.
+
+  - title: Skills
+    layout: text
+    content: |
+      - Proficient in C++, Python, ROS, Linux, PyTorch, SQL, Shell, Git, Docker, MongoDB, TensorRT.
+      - Familiar with autonomous driving algorithms, including reinforcement learning algorithms for prediction and decision-making modules, 2D detection, classification, and segmentation for perception vision modules, and 3D object detection.
+      - Experienced in deploying algorithm models on different platforms, such as NVIDIA Xavier, Orin, Heizhima A1000, and Yikatong Antora1000.
+      - Knowledgeable in sensors including cameras, lidars, INS (Inertial Navigation Systems), including basic principles, performance evaluation, comparative selection, spatial arrangement, time synchronization, and spatial calibration.
+      - Proficient in the data closed-loop of autonomous driving, including data acquisition systems, ground truth systems, automated annotation, algorithm evaluation, shadow mode, data feedback, data mining, and data anonymization.
+      - Hands-on experience in production projects.
+      - English proficiency: CET 6; IELTS 6.
+
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+      I am an adventurous and free-spirited individual who finds joy in exploring new horizons. Passionate about rock music, I immerse myself in its powerful melodies and captivating rhythms. As an avid band enthusiast, I not only appreciate the artistry behind it but also enjoy actively participating in creating music. 
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+      Traveling on a shoestring budget is my preferred way to wander the world. I embrace the thrill of discovering hidden gems, immersing myself in diverse cultures, and forging unforgettable memories along the way. 
+
+      Being a cinephile, I find solace and inspiration in the realm of cinema. From independent films to blockbuster hits, I am captivated by the art of storytelling and the magic of visual experiences. 
+
+      My spirit is rebellious and unrestrained, always seeking freedom in expressing myself authentically. I cherish the value of individuality and embrace a lifestyle that encourages self-discovery and personal growth.
 
 # Footer
 footer_show_references: true
-# references_title: References on request (Override references text)
+# references_title: 
 
 # Build settings
 # theme: modern-resume-theme (Use this is you are hosting your resume yourself)
