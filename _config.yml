@@ -69,7 +69,7 @@ content:
     content:
       - layout: left       
         border: weak
-        title: Zhongshan University
+        title: Sun Yat-Sen University
         caption: Ph.D. in Computer Science and Technology
         sub_title: 2020.08-2020.12
         description: |
@@ -165,13 +165,13 @@ content:
           - Worked on data processing tasks, including constructing trajectory datasets for trajectory clustering, prediction, and other analysis tasks.
             - Utilized ETL (Extract, Transform, Load) techniques to process environment perception results from cameras and LiDAR (Light Detection and Ranging), as well as the positioning information from integrated inertial navigation systems.
             - Used the zarr library, which supports multiple data formats, to unify the data format and achieve fast data loading.
-            - Uploaded the dataset to S3 for easy access and future algorithm iteration.
-
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
+            - Uploaded the dataset to S3 for easy access and future algorithm iteration.    
+ 
+  - title: Projects
+    layout: list
     content:
       - layout: left
-      - title: Open Source Project
+        title: Open Source Project
         border: weak
         caption: December 2020 - February 2021
         quote: >
@@ -182,8 +182,8 @@ content:
           - Analyzed the hardware and software components of robot platforms, including modeling language URDF (Unified Robot Description Format), controllers, and the Gazebo simulator.
           - Provided detailed explanations of the ROS Navigation Stack, including nav_core, global_planner, local_planner, move_base, cost_map, AMCL (Adaptive Monte Carlo Localization), and more.
           - Published tutorials and corresponding code on platforms like [CSDN](https://blog.csdn.net/allenhsu6) and [GitHub](https://github.com/allenhsu6/LearnROS).
-
-      - title: Visual Odometry
+      - layout: left
+        title: Visual Odometry
         border: weak
         caption: May 2019 - August 2019
         quote: >
@@ -194,7 +194,8 @@ content:
           - Used the PnP (Perspective-n-Point) algorithm to estimate the global pose.
           - Designed specifically for scenarios where only short-term motion needs to be considered, such as UAV control, with lower computational requirements compared to full-scale VSLAM systems while meeting the accuracy requirements of the application.
 
-      - title: Formula Student Driverless Competition
+      - layout: left
+        title: Formula Student Driverless Competition
         caption: August 2018 - December 2018
         quote: >
           Responsible for the planning and control of the Beijing University of Aeronautics and Astronautics (BUAA) AERO autonomous race car
