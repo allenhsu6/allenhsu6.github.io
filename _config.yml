@@ -52,7 +52,7 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-    - I am an Autonomous Driving Algorithm Engineer. I am passionate about developing cutting-edge algorithms that drive the future of transportation. With 5 years of experience in this field, I have been involved in various aspects of autonomous driving, including perception, decision-making, and control systems.
+    - I am passionate about developing cutting-edge algorithms that drive the future of transportation. With 5 years of experience in this field, I have been involved in various aspects of autonomous driving, including perception, decision-making, and control systems.
 
     - I have gained expertise in developing and optimizing algorithms for object detection, and classification using sensor data such as LiDAR and cameras. I have also worked on developing advanced deep learning models and reinforcement learning algorithms for prediction and decision-making modules.
 
@@ -67,32 +67,51 @@ content:
   - title: Education
     layout: list
     content:
-      - layout: top
+      - layout: left       
+        border: weak
         title: Zhongshan University
-        sub_title: Ph.D. in Computer Science and Technology
-        caption: 2020.08-2020.12
+        caption: Ph.D. in Computer Science and Technology
+        sub_title: 2020.08-2020.12
+        description: |
+          - Pursued a Ph.D. in Computer Science and Technology at Sun Yat-sen University, renowned for its academic excellence and research contributions.
+          - Engaged in cutting-edge research projects related to SLAM and Perception algorithms.
+          - Developed an in-depth understanding of advanced algorithms and their applications in the field of autonomous systems.
+          - Although the program was discontinued due to personal circumstances, the short duration allowed for the acquisition of valuable knowledge and research skills.
 
-      - layout: top
+      - layout: right
+        border: weak
         title: Beihang University
-        sub_title: M.Sc. in Control Science and Engineering
-        caption: 2017.09-2020.01
-
-      - layout: top
-        title: Northeast University (985,211)
-        sub_title: B.Sc. in Automation
-        caption: 2011.09-2015.07
+        caption: M.Sc. in Control Science and Engineering
+        sub_title: 2017.09-2020.01
+        description: |
+          - Successfully completed a rigorous Master's program in Control Science and Engineering at Beihang University, a renowned institution known for its excellence in engineering and technical education.
+          - Engaged in cutting-edge research projects focused on autonomous systems, particularly in the field of planning and control with its applications.
+          - Actively contributed to the academic community by publishing six scholarly papers in conferences and journals, showcasing expertise in areas such as control algorithms, motion planning, and autonomous navigation.
+          - Collaborated with esteemed professors and fellow researchers, participating in research discussions, experimental design, and data analysis.
+  
+      - layout: left
+        title: Northeastern University
+        caption: B.Sc. in Automation
+        sub_title: 2011.09-2015.07
+        description: |
+          - Earned a Bachelor's degree in Automation from Northeastern University.
+          - Acquired a comprehensive understanding of automation principles and techniques.
+          - Developed a solid foundation in programming, mathematics, and engineering fundamentals.
+          - Successfully completed projects involving the design and implementation of control systems.
+        
 
   - title: Experience
     layout: list
     content:
       - layout: right
+        border: weak
         title: ECARX Technology
         caption: March 2022 - Present
         sub_title: Senior Algorithm Engineer
         quote: > 
           Developed advanced algorithms for autonomous driving decision-making, perception, and data processing.
         description: |
-          - Vehicle Prediction Algorithm Module (March 2022 - October 2022)
+          - Prediction Algorithm Module (March 2022 - October 2022)
             - Contributed as a core member in the development of the vehicle prediction module.
             - Developed the vehicle prediction module which takes inputs from obstacle fusion, lane fusion, ego vehicle localization, static object perception (high-definition maps), and previous planned trajectory.
             - Implemented obstacle prioritization, intent prediction, and trajectory prediction in the module.
@@ -104,7 +123,7 @@ content:
             - Core development member responsible for the 2D and 3D object detection model finetuning.
             - Adapted the related models for on-vehicle inference and aligned the inference accuracy with the PC-side.
             - Implemented post-processing for the 3D model.
-            - Supported the visualization with DHU module for the central control screen and obstacle avoidance with the regulation control module.
+            - Supported the visualization with DHU module for the central control screen and obstacle avoidance with the PNC module.
             
           - Data Closed-Loop Module (October 2022 - Present)
             - Module primarily serving the parking perception mass production project.
@@ -115,47 +134,45 @@ content:
             - Utilized GroundingDINO and SAM for text-to-2D box and segmentation outputs for large-scale and fast annotation data generation.
       
       - layout: left
-        title: National Key Laboratory, Institute of Software, Chinese Academy of Sciences
+        border: weak
+        title: State Key Laboratory of Computer Science, Institute of Software, Chinese Academy of Sciences
         caption: March 2021 - February 2022
         sub_title: Algorithm Engineer
         quote: >
-          Worked on projects in the field of autonomous driving decision-making, focusing on deep reinforcement learning methods for training vehicles to make correct decisions on highways
+            Worked in the field of autonomous driving decision-making.
         description: |
-          - Worked in the field of autonomous driving decision-making.
-          - Conducted research on training vehicles to drive on highways and make correct decisions using deep reinforcement learning methods.
-          - Traditional decision-making algorithms are typically based on rules and manual feature design, which often exhibit a conservative behavior to ensure safety.
-          - Utilized DQN (Deep Q-Network), one of the classic deep reinforcement learning algorithms, to make decisions based on the surrounding environment and ego vehicle information, aiming to maximize the expected reward.
-          - Data engineering was primarily performed using open-source datasets and simulation environments.
-          - Achieved an accuracy rate of over 91% in simulated testing, demonstrating the model's ability to make safe and reasonable decisions in high-speed scenarios.
-          - Served as a teaching assistant for the "Reinforcement Learning" course at the University of Chinese Academy of Sciences and Hangzhou Graduate Institute.
-          - Assisted in the development of course materials and experiments.
-          - Covered topics such as Markov decision processes, Monte Carlo methods, temporal difference learning, eligibility traces, etc.
-          - Designed unmanned vehicle simulation scenarios using the gym framework for implementing reinforcement learning methods like SARSA, Q-Learning, etc.
+          - autonomous driving decision-making 
+            - Conducted research on training vehicles to drive on highways and make correct decisions using deep reinforcement learning methods.
+            - Traditional decision-making algorithms are typically based on rules and manual feature design, which often exhibit a conservative behavior to ensure safety. Utilized DQN (Deep Q-Network), one of the classic deep reinforcement learning algorithms, to make decisions based on the surrounding environment and ego vehicle information, aiming to maximize the expected reward.
+            - Data engineering was primarily performed using open-source datasets and simulation environments.
+            - Achieved an accuracy rate of over 91% in simulated testing, demonstrating the model's ability to make safe and reasonable decisions in high-speed scenarios.
+          - teaching assistant for the "Reinforcement Learning" course at the University of Chinese Academy of Sciences
+            - Assisted in the development of course materials and experiments.
+            - Covered topics such as Markov decision processes, Monte Carlo methods, temporal difference learning, eligibility traces, etc.
+            - Designed unmanned vehicle simulation scenarios using the gym framework for implementing reinforcement learning methods like SARSA, Q-Learning, etc.
+          - collaboration with [Professor Zhang Lijun](https://iscasmc.ios.ac.cn/?page_id=148)
 
       - layout: right
-        title: waytous Intelligent Co., Ltd.
+        title: Waytous Intelligent Co., Ltd.
         caption: January 2020 - August 2020
         sub_title: Algorithm Engineer
         quote: > 
           Played a key role in the development and optimization of algorithms for path planning and control in autonomous systems.
         description: |
           - Worked on tasks related to the planning module.
-          - Added the Jump Point Search algorithm to the algorithm library for global path planning in a freespace scenario in a certain mining area.
-          - In scenes with a high number of surrounding obstacles, this algorithm significantly improved search speed while still outputting the optimal path, compared to traditional A* algorithm.
-          - Adapted the commonly used TEB (Timed Elastic Band) algorithm from ROS (Robot Operating System) to the trajectory optimization library for local trajectory planning.
-          - TEB is a local trajectory planner that considers constraints such as obstacles, velocity, acceleration, and time in multi-objective optimization. It efficiently and stably computes executable and smooth trajectories with suitable parameters.
+            - Added the Jump Point Search algorithm to the algorithm library for global path planning in a freespace scenario in a certain mining area. In scenes with a high number of surrounding obstacles, this algorithm significantly improved search speed while still outputting the optimal path, compared to traditional A* algorithm.
+            - Adapted the commonly used TEB (Timed Elastic Band) algorithm from ROS (Robot Operating System) to the trajectory optimization library for local trajectory planning.
           - Worked on data processing tasks, including constructing trajectory datasets for trajectory clustering, prediction, and other analysis tasks.
-          - Utilized ETL (Extract, Transform, Load) techniques to process environment perception results from cameras and LiDAR (Light Detection and Ranging), as well as the positioning information from integrated inertial navigation systems.
-          - Used the zarr library, which supports multiple data formats, to unify the data format and achieve fast data loading.
-          - Uploaded the dataset to S3 for easy access and future algorithm iteration.
+            - Utilized ETL (Extract, Transform, Load) techniques to process environment perception results from cameras and LiDAR (Light Detection and Ranging), as well as the positioning information from integrated inertial navigation systems.
+            - Used the zarr library, which supports multiple data formats, to unify the data format and achieve fast data loading.
+            - Uploaded the dataset to S3 for easy access and future algorithm iteration.
 
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
       - title: Open Source Project
+        border: weak
         caption: December 2020 - February 2021
         quote: >
           Development of open-source tutorials related to ROS (Robot Operating System)
@@ -164,9 +181,10 @@ content:
           - Explored core functionality packages, such as the parameter server and TF (Transform) coordinate transformation.
           - Analyzed the hardware and software components of robot platforms, including modeling language URDF (Unified Robot Description Format), controllers, and the Gazebo simulator.
           - Provided detailed explanations of the ROS Navigation Stack, including nav_core, global_planner, local_planner, move_base, cost_map, AMCL (Adaptive Monte Carlo Localization), and more.
-          - Published tutorials and corresponding code on platforms like CSDN and GitHub.
+          - Published tutorials and corresponding code on platforms like [CSDN](https://blog.csdn.net/allenhsu6) and [GitHub](https://github.com/allenhsu6/LearnROS).
 
       - title: Visual Odometry
+        border: weak
         caption: May 2019 - August 2019
         quote: >
           Work related to unmanned aerial vehicle (UAV) visual odometry
