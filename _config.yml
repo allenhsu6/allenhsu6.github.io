@@ -209,7 +209,7 @@ content:
     content: |
       - Proficient in C++, Python, ROS, Linux, PyTorch, SQL, Shell, Git, Docker, MongoDB, TensorRT.
       - Familiar with autonomous driving algorithms, including reinforcement learning algorithms for prediction and decision-making modules, 2D detection, classification, and segmentation for perception vision modules, and 3D object detection.
-      - Experienced in deploying algorithm models on different platforms, such as NVIDIA Xavier, Orin, Heizhima A1000, and Yikatong Antora1000.
+      - Experienced in deploying algorithm models on different platforms, such as NVIDIA Xavier, Orin, BST A1000, and ECARX Antora1000.
       - Knowledgeable in sensors including cameras, lidars, INS (Inertial Navigation Systems), including basic principles, performance evaluation, comparative selection, spatial arrangement, time synchronization, and spatial calibration.
       - Proficient in the data closed-loop of autonomous driving, including data acquisition systems, ground truth systems, automated annotation, algorithm evaluation, shadow mode, data feedback, data mining, and data anonymization.
       - Hands-on experience in production projects.
