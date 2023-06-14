@@ -52,15 +52,9 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-    - I am passionate about developing cutting-edge algorithms that drive the future of transportation. With 5 years of experience in this field, I have been involved in various aspects of autonomous driving, including perception, decision-making, and control systems.
+    - I am passionate about developing cutting-edge algorithms that drive the future of transportation. With 5 years of experience in this field, I have been involved in various aspects of autonomous driving, including perception, decision-making, and control systems. I have gained expertise in developing and optimizing algorithms for object detection, and classification using sensor data such as LiDAR and cameras. I have also worked on developing advanced deep learning models and reinforcement learning algorithms for prediction and decision-making modules. One of my key strengths is to bridge the gap between research and practical implementation. I enjoy translating state-of-the-art algorithms into robust and efficient solutions that can be deployed in real-world autonomous vehicles. I am skilled in programming languages such as Python, C++, and have experience with popular deep learning frameworks like PyTorch.
 
-    - I have gained expertise in developing and optimizing algorithms for object detection, and classification using sensor data such as LiDAR and cameras. I have also worked on developing advanced deep learning models and reinforcement learning algorithms for prediction and decision-making modules.
-
-    - One of my key strengths is to bridge the gap between research and practical implementation. I enjoy translating state-of-the-art algorithms into robust and efficient solutions that can be deployed in real-world autonomous vehicles. I am skilled in programming languages such as Python, C++, and have experience with popular deep learning frameworks like PyTorch.
-
-    - Collaboration and continuous learning are important aspects of my work. I thrive in dynamic and multidisciplinary teams, where I can contribute my technical expertise and learn from others. I am always eager to explore new technologies and stay updated with the latest advancements in the field of autonomous driving.
-
-    - I am excited about the opportunity to contribute my skills and knowledge to this world. I believe that my strong background in autonomous driving algorithms, combined with my passion for innovation, make me a valuable asset to any team working in this exciting field.
+    - Collaboration and continuous learning are important aspects of my work. I thrive in dynamic and multidisciplinary teams, where I can contribute my technical expertise and learn from others. I am always eager to explore new technologies and stay updated with the latest advancements in the field of autonomous driving. I am excited about the opportunity to contribute my skills and knowledge to this world. I believe that my strong background in autonomous driving algorithms, combined with my passion for innovation, make me a valuable asset to any team working in this exciting field.
 
 content:
         
@@ -105,16 +99,16 @@ content:
         quote: >
             Worked in the field of autonomous driving decision-making.
         description: |
-          - autonomous driving decision-making 
+          - Autonomous driving decision-making 
             - Conducted research on training vehicles to drive on highways and make correct decisions using deep reinforcement learning methods.
             - Traditional decision-making algorithms are typically based on rules and manual feature design, which often exhibit a conservative behavior to ensure safety. Utilized DQN (Deep Q-Network), one of the classic deep reinforcement learning algorithms, to make decisions based on the surrounding environment and ego vehicle information, aiming to maximize the expected reward.
             - Data engineering was primarily performed using open-source datasets and simulation environments.
             - Achieved an accuracy rate of over 91% in simulated testing, demonstrating the model's ability to make safe and reasonable decisions in high-speed scenarios.
-          - teaching assistant for the "Reinforcement Learning" course at the University of Chinese Academy of Sciences
+          - Teaching assistant for the "Reinforcement Learning" course at the University of Chinese Academy of Sciences
             - Assisted in the development of course materials and experiments.
             - Covered topics such as Markov decision processes, Monte Carlo methods, temporal difference learning, eligibility traces, etc.
             - Designed unmanned vehicle simulation scenarios using the gym framework for implementing reinforcement learning methods like SARSA, Q-Learning, etc.
-          - collaboration with [Professor Zhang Lijun](https://iscasmc.ios.ac.cn/?page_id=148)
+          - Collaboration with [Professor Zhang Lijun](https://iscasmc.ios.ac.cn/?page_id=148)
 
       - layout: right
         title: Waytous Intelligent Co., Ltd.
