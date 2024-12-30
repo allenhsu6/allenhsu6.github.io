@@ -7,8 +7,8 @@ version: 2
 
 # Personal info
 name: AllenHsu
-title: Autonomous Driving Algorithm Engineer
-email: sy1714201@buaa.edu.cn
+title: Algorithm Engineer
+email: xuzhi0625@qq.com
 # email_title: Email (Email title override)
 phone: (+86)17610071006
 # phone_title: Phone (Phone title override)
@@ -52,15 +52,40 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-    - I am passionate about developing cutting-edge algorithms that drive the future of transportation. With 5 years of experience in this field, I have been involved in various aspects of autonomous driving, including perception, decision-making, and control systems. I have gained expertise in developing and optimizing algorithms for object detection, and classification using sensor data such as LiDAR and cameras. I have also worked on developing advanced deep learning models and reinforcement learning algorithms for prediction and decision-making modules. One of my key strengths is to bridge the gap between research and practical implementation. I enjoy translating state-of-the-art algorithms into robust and efficient solutions that can be deployed in real-world autonomous vehicles. I am skilled in programming languages such as Python, C++, and have experience with popular deep learning frameworks like PyTorch.
+    - I am passionate about developing advanced algorithms that tackle complex real-world challenges. With 6 years of experience in fields such as autonomous systems and AI-driven solutions, I have worked extensively across perception, decision-making, and control systems. My expertise lies in designing and optimizing models for object detection, classification, and predictive tasks, leveraging sensor data such as LiDAR, cameras, and other modalities. In addition to applied algorithm development, I have a strong background in crafting scalable deep learning models and reinforcement learning algorithms, focusing on robust performance and adaptability. I excel at bridging the gap between cutting-edge research and practical deployment, transforming state-of-the-art methodologies into efficient, real-world solutions. Beyond domain-specific applications, I am highly skilled in working with large-scale datasets and building end-to-end pipelines for training, validation, and evaluation. My programming expertise includes Python and C++, and I am well-versed in deep learning frameworks like PyTorch, enabling me to contribute to diverse AI-driven projects.
 
     - Collaboration and continuous learning are important aspects of my work. I thrive in dynamic and multidisciplinary teams, where I can contribute my technical expertise and learn from others. I am always eager to explore new technologies and stay updated with the latest advancements in the field of autonomous driving. I am excited about the opportunity to contribute my skills and knowledge to this world. I believe that my strong background in autonomous driving algorithms, combined with my passion for innovation, make me a valuable asset to any team working in this exciting field.
 
 content:
         
   - title: Experience
-    layout: list
+    layout: list  
     content:
+
+    - layout: left
+        border: weak
+        title: NIO Technology Autonomous Driving Large Model Division
+        caption: August 2023 - Present
+        sub_title: Senior Algorithm Engineer
+        quote: > 
+          Developed advanced algorithms for autonomous driving decision-making, perception, and data processing.
+        description: |
+          - OD Dataset Curation (August 2023 - May 2024)
+            - Addressed the challenges of high annotation and training costs associated with millions of legacy data points and massive incremental datasets in object detection (OD) tasks.
+            - Implemented active learning methods based on data gradient similarity to emphasize underlying reasoning process similarities and better utilize data distributions.
+            - Achieved comparable accuracy to full dataset training using only 20% curated data, improving training efficiency by 5x and significantly reducing storage and computational costs.
+            - Reduced annotation demand by 90% on incremental datasets, realizing a 10x efficiency improvement.
+            - Developed a data quality inspection model to tackle common issues such as inaccurate bounding boxes and heading errors in auto-labeled production data.
+            - Achieved precision of 92% and recall of 89% on noisy data identification using a fine-tuned evaluation dataset. The filtered OD model demonstrated a 1% overall performance improvement, with notable enhancements in close-range object detection.
+            - Deployed the model on annotation production lines to proactively detect data defects, reducing manual inspection costs. This work resulted in two patents.
+
+          - End-to-End Model Development (May 2024 - Present)
+            - Pioneered the adaptation of vision-language multimodal large models for autonomous driving using the LLava-next framework.
+            - Replaced the vision backbone with the DINOv2 base version and designed a 3D Q-Former to align visual and textual modalities.
+            - Developed a custom VQA dataset to equip the model with 3D perception and reasoning capabilities. Integrated the VLM-based planner to handle complex scenarios, ensuring robustness and generalization for unknown cases. This work resulted in a patent.
+            - Introduced diffusion models into trajectory planning for autonomous vehicles, inspired by their success in robotics.
+            - Designed a transformer-based noise model with DDPM scheduling to predict 7-second future trajectories directly. The diffusion model ensures smooth, controllable, and natural multimodal predictions, outperforming discriminative models in long-horizon tasks.
+
       - layout: right
         border: weak
         title: ECARX Technology
@@ -124,7 +149,7 @@ content:
             - Utilized ETL (Extract, Transform, Load) techniques to process environment perception results from cameras and LiDAR (Light Detection and Ranging), as well as the positioning information from integrated inertial navigation systems.
             - Used the zarr library, which supports multiple data formats, to unify the data format and achieve fast data loading.
             - Uploaded the dataset to S3 for easy access and future algorithm iteration.    
- 
+
   - title: Projects
     layout: list
     content:
