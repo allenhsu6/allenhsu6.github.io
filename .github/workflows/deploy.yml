@@ -1,34 +1,40 @@
-name: Build and deploy site
+name: Publish static site to GitHub Pages
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
-# Grant write permission so the action can push to branches
+# Permissions required for Pages deployment
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: true
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
+      - name: Prepare Pages (no build - repo already contains static files)
+        # If your static site files live in a subfolder (e.g. ./public),
+        # change the path below to that folder.
+        run: |
+          echo "Listing repository root (for debugging)"
+          ls -la
 
-      - name: Build site
-        run: hugo --minify -d public
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v1
         with:
-          publish_dir: ./public
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Use root or replace with the folder that contains your static site (e.g. public)
+          path: |
+            ./
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
+
