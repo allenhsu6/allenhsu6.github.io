@@ -27,14 +27,11 @@ jobs:
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
-
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+      - name: Deploy repository root to gh-pages
+        # Use peaceiris actions to push static files to gh-pages branch directly
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          # Use root or replace with the folder that contains your static site (e.g. public)
-          path: |
-            ./
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+          publish_dir: ./
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
