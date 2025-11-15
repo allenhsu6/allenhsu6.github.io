@@ -1,60 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Xu&#39;Log</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Xu&#39;Log</description>
-    <generator>Hugo -- 0.143.1</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 15 Feb 2025 10:41:35 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Deepseek论文解读：MLA</title>
-      <link>http://localhost:1313/posts/deepseek_series1_mla/</link>
-      <pubDate>Sat, 15 Feb 2025 10:41:35 +0800</pubDate>
-      <guid>http://localhost:1313/posts/deepseek_series1_mla/</guid>
-      <description>&lt;p&gt;Multihead Latent Attention (MLA)是Deepseek提出的一种新的attention机制，用于减少推理时的内存瓶颈，同时兼顾性能提升和缓存效率。本文将对MLA的原理、实现和效果进行解读。&lt;/p&gt;
-&lt;h1 id=&#34;notations&#34;&gt;Notations&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Xu'Log</title><link>https://allenhsu6.github.io/</link><description>Recent content on Xu'Log</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Sat, 15 Nov 2025 11:25:00 +0800</lastBuildDate><atom:link href="https://allenhsu6.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>自动化部署流程测试</title><link>https://allenhsu6.github.io/posts/automation-test/</link><pubDate>Sat, 15 Nov 2025 11:25:00 +0800</pubDate><guid>https://allenhsu6.github.io/posts/automation-test/</guid><description>测试 Hugo 博客的自动化部署流程：从 my_blog 私有仓库到 GitHub Pages 的完整自动化</description></item><item><title>Deepseek论文解读：MLA</title><link>https://allenhsu6.github.io/posts/deepseek_series1_mla/</link><pubDate>Sat, 15 Feb 2025 10:41:35 +0800</pubDate><guid>https://allenhsu6.github.io/posts/deepseek_series1_mla/</guid><description>&lt;p&gt;Multihead Latent Attention (MLA)是Deepseek提出的一种新的attention机制，用于减少推理时的内存瓶颈，同时兼顾性能提升和缓存效率。本文将对MLA的原理、实现和效果进行解读。&lt;/p&gt;
+&lt;h1 id="notations"&gt;Notations&lt;/h1&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Symbol&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;$d_h$&lt;/td&gt;
-          &lt;td&gt;dimension of embedding per attention head&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;$d_c$&lt;/td&gt;
-          &lt;td&gt;the KV compression dimension in MLA&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;$d_r^R$&lt;/td&gt;
-          &lt;td&gt;the per-head dimension of the decoupled queries and key in MLA&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;$n_h$&lt;/td&gt;
-          &lt;td&gt;number of attention heads&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;$l$&lt;/td&gt;
-          &lt;td&gt;the transformer layer number&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;$h_t \in \mathbb{R}^{d}$&lt;/td&gt;
-          &lt;td&gt;the attention input of $t$-th token at an attention layer&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;$u_t \in \mathbb{R}^{d}$&lt;/td&gt;
-          &lt;td&gt;the output hidden of $t$-th token at an attention layer&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Symbol&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;$d_h$&lt;/td&gt;
+&lt;td&gt;dimension of embedding per attention head&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$d_c$&lt;/td&gt;
+&lt;td&gt;the KV compression dimension in MLA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$d_r^R$&lt;/td&gt;
+&lt;td&gt;the per-head dimension of the decoupled queries and key in MLA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$n_h$&lt;/td&gt;
+&lt;td&gt;number of attention heads&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$l$&lt;/td&gt;
+&lt;td&gt;the transformer layer number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$h_t \in \mathbb{R}^{d}$&lt;/td&gt;
+&lt;td&gt;the attention input of $t$-th token at an attention layer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$u_t \in \mathbb{R}^{d}$&lt;/td&gt;
+&lt;td&gt;the output hidden of $t$-th token at an attention layer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
-&lt;p&gt;auto-regressive的LLM主要是decoder的架构，基于先前生成的tokens来预测下一个token。生成过程是顺序的，会用到历史token的KV来保证生成的连贯性，直到最大长度或者生成结束符。 每一步的output作为下次input时，需要进行tokenlizer、embedding、MLP投影生成Q，K，V，这时为了避免重复计算，会将KV做cache；但是在常用MHA中，kVcache的大小会随着token长度的增加而增加，导致内存瓶颈。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h1 id="背景"&gt;背景&lt;/h1&gt;
+&lt;p&gt;auto-regressive的LLM主要是decoder的架构，基于先前生成的tokens来预测下一个token。生成过程是顺序的，会用到历史token的KV来保证生成的连贯性，直到最大长度或者生成结束符。 每一步的output作为下次input时，需要进行tokenlizer、embedding、MLP投影生成Q，K，V，这时为了避免重复计算，会将KV做cache；但是在常用MHA中，kVcache的大小会随着token长度的增加而增加，导致内存瓶颈。&lt;/p&gt;</description></item></channel></rss>
