@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>RL on Xu'Log</title><link>https://www.xuquant.com/tags/rl/</link><description>Recent content in RL on Xu'Log</description><generator>Hugo -- 0.154.5</generator><language>en-us</language><lastBuildDate>Tue, 20 Jan 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://www.xuquant.com/tags/rl/index.xml" rel="self" type="application/rss+xml"/><item><title>RL在自动驾驶中的应用</title><link>https://www.xuquant.com/posts/autodrive/basic_rl/</link><pubDate>Tue, 20 Jan 2026 10:00:00 +0800</pubDate><guid>https://www.xuquant.com/posts/autodrive/basic_rl/</guid><description>&lt;h1 id="过程梳理"&gt;过程梳理&lt;/h1&gt;
+&lt;h2 id="metric-cache"&gt;Metric cache&lt;/h2&gt;
+&lt;p&gt;Metric Cache 在这个工程中是一个预计算的环境真值与场景快照，专门为了加速 PDM (Predictive Drive Model) 评分过程而设计的。&lt;/p&gt;
+&lt;p&gt;它的核心作用是：解耦了繁重的 NuPlan 数据加载与实时特征计算。在评估（Inference/Evaluation）阶段，模型不需要去查原始的 NuPlan 数据库，而是直接读取这个 Cache 来获取所有的环境约束和评判标准。&lt;/p&gt;
+&lt;p&gt;以下是详细的工程视角解析：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;字段定义
+一个 Python dataclass 对象，被序列化为 .pkl 文件（LZMA压缩）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;它包含以下核心字段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;file_path: 原始文件路径。&lt;/li&gt;
+&lt;li&gt;trajectory: PDM-Closed Planner 生成的参考轨迹。这是一个基于规则（IDM）生成的“专家演示”轨迹，用于作为 Baseline 对比。&lt;/li&gt;
+&lt;li&gt;ego_state: 自车的初始状态（位置、速度、朝向）。&lt;/li&gt;
+&lt;li&gt;observation: 未来时刻的动态障碍物真值 (PDMObservation)。包含周围车辆、行人的未来轨迹（已插值到 10Hz）。&lt;/li&gt;
+&lt;li&gt;centerline: 车道中心线 (PDMPath)。用于判断自车是否在正确路线上以及计算行驶进度。&lt;/li&gt;
+&lt;li&gt;route_lane_ids: 导航路径上的车道 ID 列表。&lt;/li&gt;
+&lt;li&gt;drivable_area_map: 可行驶区域图 (PDMDrivableMap)。用于快速碰撞检测，判断自车是否驶出道路。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;生产
+生成逻辑在 metric_cache_processor.py 中。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当你运行 run_metric_caching.py 时，流程如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;加载场景: 从 NuPlan 数据库读取原始 Scenario。&lt;/li&gt;
+&lt;li&gt;运行 PDM-Closed Planner: 也就是运行一个基于 IDM (Intelligent Driver Model) 的规则算法，生成一条“参考轨迹”并存入 trajectory 字段。&lt;/li&gt;
+&lt;li&gt;插值真值 (Ground Truth): 将场景中所有其他 Agent 的真实轨迹插值到 10Hz（0.1秒间隔），存入 observation。这是为了在评估时进行高精度的碰撞检测。&lt;/li&gt;
+&lt;li&gt;提取地图: 提取周围的可行驶区域多边形和中心线，存入 drivable_area_map 和 centerline。&lt;/li&gt;
+&lt;li&gt;序列化: 将上述所有对象打包，压缩保存为 Cache 文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;ol start="3"&gt;
+&lt;li&gt;
+&lt;p&gt;使用
+在推理/评估脚本 run_pdm_score.py (调用 pdm_score.py) 中：&lt;/p&gt;</description></item></channel></rss>
